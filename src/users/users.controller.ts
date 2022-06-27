@@ -40,7 +40,10 @@ export class UsersController {
   }
 
   @Put(':id')
-  uptade(@Body() updateUserdto: UpdateUserDto, @Param('id') id: string): Promise<User> {
+  uptade(
+    @Body() updateUserdto: UpdateUserDto,
+    @Param('id') id: string
+  ): Promise<User> {
     return this.usersServise.updateUser(id, updateUserdto);
   }
 }
